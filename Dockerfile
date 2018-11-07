@@ -20,7 +20,7 @@ RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 #installazione Apache, MySQL, PHP5 e tutte le utility necessarie
 RUN add-apt-repository ppa:mc3man/trusty-media
 RUN apt-get update
-RUN apt-get install -qy mysql-server mysql-client apache2 php5 php5-dev php5-gd php5-mysql subversion vim nano less mc sudo unoconv imagemagick ghostscript libgs-dev antiword xpdf libav-tools ffmpeg libimage-exiftool-perl cron wget poppler-utils zip
+RUN apt-get install -qy mysql-server mysql-client apache2 php5 php5-dev php5-gd php5-mysql subversion vim nano less mc sudo unoconv imagemagick ghostscript libgs-dev antiword xpdf libav-tools ffmpeg libimage-exiftool-perl cron wget poppler-utils zip python3-uno libreoffice-writer libreoffice-draw libreoffice-calc libreoffice-impress
 
 #configurazione PHP5
 RUN sed -i -e "s/upload_max_filesize\s*=\s*2M/upload_max_filesize = 8G/g" /etc/php5/apache2/php.ini
